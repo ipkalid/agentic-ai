@@ -2,6 +2,20 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+### Environment Setup
+
+1. Copy the example environment file:
+   ```bash
+   cp .env.example .env
+   ```
+
+2. Edit `.env` and add your API keys:
+   - **OPENAI_API_KEY**: Get from [OpenAI Platform](https://platform.openai.com/api-keys)
+   - **OPENWEATHER_API_KEY**: Get from [OpenWeatherMap](https://openweathermap.org/api)
+   - **OPENAI_BASE_URL**: Optional, defaults to OpenAI's API (can use Groq or other compatible APIs)
+
+### Running the Development Server
+
 First, run the development server:
 
 ```bash
