@@ -1,50 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Agentic AI Framework
 
-## Getting Started
+A powerful and extensible AI agent framework built with Next.js and TypeScript. This project provides a modular architecture for creating intelligent agents with customizable tools and capabilities.
 
-### Environment Setup
+## 🚀 Quick Start
 
-1. Copy the example environment file:
+**New to this project?** Start here:
+
+📖 **[HOW_TO_RUN.md](./HOW_TO_RUN.md)** - Complete setup and running guide
+
+## 🏗️ Framework Documentation
+
+**Want to build custom agents and tools?** Check out:
+
+🔧 **[Framework Documentation](./src/core/FRAMEWORK.md)** - Comprehensive guide for developers
+
+## 📋 What's Included
+
+This framework comes with:
+
+- **🤖 Pre-built Agents**: General, HR, and Travel agents
+- **🛠️ Extensible Tools**: Web search, calculations, weather, and more
+- **💬 Function Calling**: Seamless OpenAI function calling integration
+- **📝 Conversation Management**: Built-in chat history and context handling
+- **🔒 Type Safety**: Full TypeScript support throughout
+- **🎨 Modern UI**: Beautiful Next.js interface
+
+## 🏃‍♂️ Quick Setup
+
+1. **Install dependencies**:
    ```bash
-   cp .env.example .env
+   npm install
    ```
 
-2. Edit `.env` and add your API keys:
-   - **OPENAI_API_KEY**: Get from [OpenAI Platform](https://platform.openai.com/api-keys)
-   - **OPENWEATHER_API_KEY**: Get from [OpenWeatherMap](https://openweathermap.org/api)
-   - **OPENAI_BASE_URL**: Optional, defaults to OpenAI's API (can use Groq or other compatible APIs)
+2. **Set up environment**:
+   ```bash
+   cp .env.example .env
+   # Add your OpenAI API key to .env
+   ```
 
-### Running the Development Server
+3. **Start development server**:
+   ```bash
+   npm run dev
+   ```
 
-First, run the development server:
+4. **Open your browser**: [http://localhost:3000](http://localhost:3000)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📚 Documentation Structure
+
+- **[HOW_TO_RUN.md](./HOW_TO_RUN.md)** - Setup, installation, and running instructions
+- **[src/core/FRAMEWORK.md](./src/core/FRAMEWORK.md)** - Developer guide for creating agents and tools
+- **[Next.js Documentation](https://nextjs.org/docs)** - Learn about the underlying framework
+
+## 🏗️ Project Structure
+
+```
+agentic-ai/
+├── src/
+│   ├── app/                 # Next.js app directory
+│   ├── config/              # Application configuration
+│   └── core/                # 🎯 Agentic AI Framework
+│       ├── agents/          # AI agent implementations
+│       ├── core/            # Core client and config
+│       ├── tools/           # Tool implementations
+│       ├── utils/           # Utility functions
+│       └── FRAMEWORK.md     # 📖 Developer documentation
+├── HOW_TO_RUN.md           # 🚀 Setup guide
+└── README.md               # 👈 You are here
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌟 Key Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Multi-Agent System
+- **General Agent**: Versatile assistant for various tasks
+- **HR Agent**: Specialized for human resources operations
+- **Travel Agent**: Focused on travel planning and weather
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Extensible Tool System
+- **Web Search**: Real-time internet search capabilities
+- **Calculations**: Mathematical operations and computations
+- **Weather**: Current weather and forecasts
+- **Custom Tools**: Easy to add your own tools
 
-## Learn More
+### Developer Experience
+- **TypeScript**: Full type safety and IntelliSense
+- **Modular Design**: Clean separation of concerns
+- **Easy Extension**: Simple patterns for adding agents and tools
+- **Comprehensive Docs**: Detailed guides and examples
 
-To learn more about Next.js, take a look at the following resources:
+## 📄 License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is licensed under a **Modified MIT License with Modification Restrictions**.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+⚠️ **Important**: This software may be used and distributed, but **modifications are not permitted** without explicit written permission from the copyright holder.
 
-## Deploy on Vercel
+**What you CAN do:**
+- ✅ Use the software as-is
+- ✅ Distribute unmodified copies
+- ✅ Use for commercial purposes (unmodified version only)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**What you CANNOT do without permission:**
+- ❌ Modify, alter, or create derivative works
+- ❌ Make code changes or adaptations
+- ❌ Add or remove features
+- ❌ Fix bugs or make improvements
+- ❌ Redistribute modified versions
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For modification permissions, please contact the copyright holder. See the [LICENSE](./LICENSE) file for complete terms.
