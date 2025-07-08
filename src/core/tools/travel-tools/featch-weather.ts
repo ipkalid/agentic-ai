@@ -97,6 +97,7 @@ export class FetchWeatherTool extends BaseTool<FetchWeatherParams, ToolResult> {
 
         const { location, date } = params;
 
+        updateOutput(`Fetching weather data for ${params.location}...`)
         let prompt = date ? `what is the weather in ${location} on ${date}` : `what is the weather in ${location} today`
 
         const weatherResponse = z.object({
@@ -109,7 +110,7 @@ export class FetchWeatherTool extends BaseTool<FetchWeatherParams, ToolResult> {
         const RESPONSE_SCHEMA = zodResponseFormat(weatherResponse, "weather_data");
         let data = await fetchChatCompletion<ResponseFormatJSONSchema>(RESPONSE_SCHEMA, prompt)
 
-        updateOutput(`Fetching weather data for ${params.location}...`)
+
         await new Promise(resolve => setTimeout(resolve, 1000));
 
         updateOutput("Weather data loaded successfully");

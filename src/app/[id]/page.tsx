@@ -28,7 +28,7 @@ export default function ChatPage() {
     setMessages([
       {
         id: '1',
-        content: `Hello! I'm ${agent.getName()}. How can I help you today?`,
+        content: `Hello! I'm ${agent.getDescription()} How can I help you today?`,
         sender: 'agent',
         timestamp: new Date()
       }

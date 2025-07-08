@@ -92,6 +92,21 @@ export class BaseAgent implements ChatHistoryProvider {
         toolFunctions.forEach(tool => this.registerFunction(tool));
     }
 
+    /**
+     * Get a description of all available tools for this agent
+     * @returns A formatted string describing all registered tools
+     */
+    public getDescription(): string {
+        if (this.tools.size === 0) {
+            return `${this.config.name} has no tools available.`;
+        }
+
+        const toolDescriptions = Array.from(this.tools.values()).map(tool => {
+            return ` ${tool.name} `;
+        }).join('\n\n');
+
+        return `${this.config.name} and I can use the following tools:\n\n${toolDescriptions}`;
+    }
 
 
     private getToolsForAPI(): ChatCompletionTool[] {

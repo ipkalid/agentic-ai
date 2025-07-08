@@ -130,14 +130,14 @@ export class FetchEventsTool extends BaseTool<FetchEventsParams, ToolResult> {
         });
 
 
+        updateOutput(`Fetching events for ${params.location}...`)
 
 
         type ResponseFormatJSONSchema = z.infer<typeof EventsResponse>;
         const RESPONSE_SCHEMA = zodResponseFormat(EventsResponse, "events");
         let data = await fetchChatCompletion<ResponseFormatJSONSchema>(RESPONSE_SCHEMA, basePrompt)
 
-        updateOutput(`Fetching events for ${params.location}...`)
-        await new Promise(resolve => setTimeout(resolve, 1000));
+
 
         updateOutput("Events data loaded successfully");
 
