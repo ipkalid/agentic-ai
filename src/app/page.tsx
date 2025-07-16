@@ -9,6 +9,7 @@ import { useRouter } from 'next/navigation';
 import { createGeneralAgent } from '@/core/agents/general-agent';
 import { createTravelAgent } from '@/core/agents/travel-agent';
 import { getAppConfig } from '@/config/app-config';
+import { createMalStreamAgent } from '@/core/agents/mal-stream-agent';
 
 
 
@@ -17,7 +18,7 @@ export default function AgentSelection() {
   const [selectedAgent, setSelectedAgent] = useState<BaseAgent | null>(null);
 
   // Initialize agents at runtime to avoid build-time issues
-  const agents: BaseAgent[] = [createGeneralAgent(getAppConfig()), createHRAgent(getAppConfig()), createTravelAgent(getAppConfig())];
+  const agents: BaseAgent[] = [createGeneralAgent(getAppConfig()), createHRAgent(getAppConfig()), createTravelAgent(getAppConfig()), createMalStreamAgent(getAppConfig())];
   return (
     <div className={styles.page}>
       <main className={styles.main}>
