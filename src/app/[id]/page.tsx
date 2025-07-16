@@ -2,7 +2,7 @@
 import { useState, useRef, useEffect } from 'react';
 
 
-import { useParams, useSearchParams } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import styles from './chat.module.css';
 import { BaseAgent } from '@/core/agents/agent';
@@ -22,7 +22,7 @@ export default function ChatPage() {
 
   useEffect(() => {
     const agentId = params.id?.toString().replace("%20", " ");
-    const agent = agents[agentId as keyof typeof agents] || agents['General Assistant'];
+    const agent = agents[agentId as keyof typeof agents] || agents['Real Estate Agent'];
     setAgent(agent)
 
     setMessages([
