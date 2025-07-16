@@ -12,7 +12,7 @@ import type { Configuration } from '../core/config';
 export class MalStreamAgent extends BaseAgent {
     constructor(config: Configuration) {
         const defaultConfig: AgentConfig = {
-            name: 'Mal-Stream Real Estate Agent',
+            name: 'Real Estate Agent',
             model: process.env.NEXT_PUBLIC_MODEL || 'gpt-4.1',
             temperature: 0.7,
             maxTokens: 2000,

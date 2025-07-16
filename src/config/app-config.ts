@@ -25,5 +25,5 @@ export const agents = {
   'HR Assistant': createHRAgent(getAppConfig()),
   'Travel Assistant': createTravelAgent(getAppConfig()),
   'General Assistant': createGeneralAgent(getAppConfig()),
-  'Mal-Stream%20Real%20Estate%20Agent': createMalStreamAgent(getAppConfig()),
+  'Real Estate Agent': createMalStreamAgent(getAppConfig()),
 };
