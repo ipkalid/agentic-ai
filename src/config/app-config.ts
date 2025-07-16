@@ -1,5 +1,6 @@
 import { createGeneralAgent } from '@/core/agents/general-agent';
 import { createHRAgent } from '@/core/agents/hr-agent';
+import { createMalStreamAgent } from '@/core/agents/mal-stream-agent';
 import { createTravelAgent } from '@/core/agents/travel-agent';
 import { Configuration } from '@/core/core/config';
 
@@ -24,4 +25,5 @@ export const agents = {
   'HR Assistant': createHRAgent(getAppConfig()),
   'Travel Assistant': createTravelAgent(getAppConfig()),
   'General Assistant': createGeneralAgent(getAppConfig()),
+  'Mal Stream Assistance': createMalStreamAgent(getAppConfig()),
 };
